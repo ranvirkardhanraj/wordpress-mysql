@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-pv
+  labels:
+    app: wordpress
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 192.168.189.138
+    # Exported path of your NFS server dont forget to change the above line
+    path: "/root/wordpress/shared"
+

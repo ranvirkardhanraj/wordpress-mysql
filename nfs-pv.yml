@@ -10,7 +10,7 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 192.168.189.138
+    server: 192.168.189.138 # provide nfs-server ip
     # Exported path of your NFS server dont forget to change the above line
     path: "/root/wordpress/shared"
 
